@@ -13,6 +13,6 @@ echo -e "\nstart slave node..."
 sudo docker run -d -p 8649:8649/udp --name slave kiwenlau/gangalia-slave
 
 echo -e "\nstart master node..."
-sudo docker run -d --name master -v /etc/ganglia/gmetad.conf:/etc/ganglia/gmetad.conf -v /var/lib/ganglia:/var/lib/ganglia --link slave:slave -p 80:80 kiwenlau/gangalia-master
+sudo docker run -d --name master  -v /var/lib/ganglia:/var/lib/ganglia --link slave:slave -p 80:80 kiwenlau/gangalia-master
 
 echo ""

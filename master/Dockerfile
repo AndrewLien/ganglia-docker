@@ -39,6 +39,8 @@ RUN sed -i '/#OPTS=""/c\OPTS=" -t 60 -w 300 -z 300 -F -s ganglia -m 664 -l 127.0
 RUN touch /var/lib/ganglia-web/conf/events.json
 RUN chown ganglia:ganglia /var/lib/ganglia-web/conf/events.json
 
+ADD gmetad.conf /etc/ganglia/gmetad.conf 
+
 EXPOSE 80
 
 CMD /etc/init.d/rrdcached start & /etc/init.d/gmetad start & /usr/sbin/apache2ctl -D FOREGROUND
