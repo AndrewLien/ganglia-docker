@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SLAVE_IP=(192.168.59.63)
+SLAVE_IP=(192.168.59.2)
 
 sudo rm -rf /var/lib/ganglia
 sudo mkdir -p /var/lib/ganglia/rrds
