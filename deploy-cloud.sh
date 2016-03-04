@@ -23,7 +23,7 @@ sudo docker run -d --net=host --name ganglia-master \
 
 
 # start slave container
-for (( i = 0; i < 1; i++ )); do
+for (( i = 0; i < 5; i++ )); do
          echo -e "\nstart ganglia slave$i..."
          sudo docker -H tcp://${SLAVE_IP[$i]}:4000 run -d --privileged --net=host --name ganglia-slave$i \
                                                        -v /etc/localtime:/etc/localtime:ro \
