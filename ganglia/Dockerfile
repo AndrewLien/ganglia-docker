@@ -50,6 +50,8 @@ ADD ganglia-slave.conf /etc/supervisor/conf.d/ganglia-slave.conf
 ADD gmetad.conf /etc/ganglia/gmetad.conf 
 ADD gmond.conf /etc/ganglia/gmond.conf 
 
+RUN chown -R ganglia:ganglia /etc/ganglia
+
 EXPOSE 80
 
 #CMD /etc/init.d/rrdcached start & /etc/init.d/gmetad start & /usr/sbin/apache2ctl -D FOREGROUND
