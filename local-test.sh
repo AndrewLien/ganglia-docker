@@ -14,11 +14,6 @@ sudo docker run -d -p 8649:8649/udp --name slave kiwenlau/gangalia-slave > /dev/
 
 CURRENT_DIRECTORY=`pwd`
 
-sudo rm -rf gangalia
-sudo mkdir -p ganglia/rrds
-sudo chown -R 999:999 ganglia
-sudo chmod -R 777 ganglia
-
 sudo sh -c "cat > gmetad.conf <<EOL
 data_source \"cluster1\" slave:8649
 setuid_username \"ganglia\"
