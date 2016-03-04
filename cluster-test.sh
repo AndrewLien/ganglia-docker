@@ -21,7 +21,6 @@ echo -e "\nstart master node..."
 sudo docker rm -f $(sudo docker ps -aq) > /dev/null
 sudo docker run -d --net=host --name ganglia-master \
                 -v /etc/localtime:/etc/localtime:ro \
-                -v /var/lib/ganglia:/var/lib/ganglia \
                 kiwenlau/ganglia \
                 supervisord --configuration=/etc/supervisor/conf.d/ganglia-master.conf > /dev/null
 

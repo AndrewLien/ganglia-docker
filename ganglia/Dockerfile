@@ -52,6 +52,10 @@ ADD gmond.conf /etc/ganglia/gmond.conf
 
 RUN chown -R ganglia:ganglia /etc/ganglia
 
+RUN rm -rf /var/lib/ganglia && \
+    mkdir -p /var/lib/ganglia/rrds && \
+    chown -R 999:999 /var/lib/ganglia
+
 EXPOSE 80
 
 #CMD /etc/init.d/rrdcached start & /etc/init.d/gmetad start & /usr/sbin/apache2ctl -D FOREGROUND
