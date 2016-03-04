@@ -48,7 +48,7 @@ ADD ganglia-master.conf /etc/supervisor/conf.d/ganglia-master.conf
 ADD ganglia-slave.conf /etc/supervisor/conf.d/ganglia-slave.conf
 
 ADD gmetad.conf /etc/ganglia/gmetad.conf 
-# ADD gmond.conf /etc/ganglia/gmond.conf 
+#ADD gmond.conf /etc/ganglia/gmond.conf 
 
 RUN chown -R ganglia:ganglia /etc/ganglia
 
