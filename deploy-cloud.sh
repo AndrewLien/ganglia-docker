@@ -1,7 +1,15 @@
 #!/bin/bash
 
 MASTER_IP=192.168.59.156
-SLAVE_IP=(192.168.59.62 192.168.59.63 192.168.59.64 192.168.59.65 192.168.59.66)
+
+# kai-node: Docker in Docker and Sibling Docker
+#SLAVE_IP=(192.168.59.62 192.168.59.63 192.168.59.64 192.168.59.65 192.168.59.66)
+
+# kai-galaxy-swarm2: Tool in Docker
+#SLAVE_IP=(192.168.59.15 192.168.59.16 192.168.59.17 192.168.59.18 192.168.59.19)
+
+# kai-kubernetes2: Tool in Docker
+SLAVE_IP=(192.168.59.85 192.168.59.86 192.168.59.87 192.168.59.88 192.168.59.89)
 
 # sudo rm -rf /var/lib/ganglia
 # sudo mkdir -p /var/lib/ganglia/rrds
